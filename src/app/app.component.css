@@ -1,0 +1,9 @@
+.map{
+    height: 600px;
+    width: 100%;
+}
+
+.form-control {
+   display: inline-block;
+   width: 60%;
+}
