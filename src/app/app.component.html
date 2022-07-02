@@ -1,73 +1,45 @@
-<!-- Author Sharmin Rumap -->
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
   <img width="40" alt="Angular Logo"
     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
   <span> Google Map</span>
-  <div class="spacer"></div>
-  <a aria-label="Twitter" target="_blank" rel="noopener" href="https://twitter.com/sharmin_rumpa" title="Twitter">
-    <svg id="twitter-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-      <rect width="400" height="400" fill="none" />
-      <path
-        d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23"
-        fill="#fff" />
-    </svg>
-  </a>
-  <a id="linkedin-logo" aria-label="Linkedin" target="_blank" rel="noopener"
-    href="https://www.linkedin.com/in/sharmin-rumpa-27b4b4164/" title="YouTube" class="fa fa-linkedin"></a>
-
-  <a id="dribbble-logo" aria-label="Website" target="_blank" rel="noopener"
-    href="https://sharminrumpa.github.io/portfolio/" title="YouTube" class="fa fa-dribbble"></a>
+  
 </div>
 
 <div class="content" role="main">
-
-  <!-- Add New Area -->
-  <div class="container-fluid m-1">
-    <div class="row">
+  <div class="row">
+    <div class="col">
       <form #form="ngForm">
         <div class="row">
-          <div class="col p-0">
-            <div class="form-group pt-1">
+            <div class="form-group">
               <label class="m-2" for="north">North :</label>
-              <input type="text" id="north" name="north" [(ngModel)]="north" class="form-control form-control-sm"
+              <input style="width: 40%;" type="text" id="north" name="north" [(ngModel)]="north" class="form-control form-control-sm"
                 required>
             </div>
-          </div>
-          <div class="col p-0">
-            <div class="form-group pt-1">
-              <label class="m-2" for="south">South : </label>
-              <input type="text" id="south" name="south" [(ngModel)]="south" class="form-control form-control-sm"
+            <div class="form-group">
+              <label class="m-2" for="south">South :</label>
+              <input style="width: 40%;" type="text" id="south" name="south" [(ngModel)]="south" class="form-control form-control-sm"
                 required>
             </div>
-          </div>
-          <div class="col p-0">
-            <div class="form-group pt-1">
-              <label class="m-2" for="east">East : </label>
-              <input type="text" id="east" name="east" [(ngModel)]="east" class="form-control form-control-sm" required>
+            <div class="form-group">
+              <label class="m-3" for="east">East :</label>
+              <input style="width: 40%;" type="text" id="east" name="east" [(ngModel)]="east" class="form-control form-control-sm" required>
             </div>
-          </div>
-          <div class="col p-0">
-            <div class="form-group pt-1">
-              <label class="m-2" for="west">West : </label>
-              <input type="text" id="west" name="west" [(ngModel)]="west" class="form-control form-control-sm" required>
-            </div>
-          </div>
-          <div class="col p-0">
-            <div class="form-group pt-1">
-              <label class="m-1" for="strokeColor">Stroke Color : </label>
+            <div class="form-group">
+              <label class="m-2" for="west">West :</label>
+              <input style="width: 40%;" type="text" id="west" name="west" [(ngModel)]="west" class="form-control form-control-sm" required>
+            </div>       
+            <div class="form-group">
+              <label class="m-2" for="strokeColor">Stroke Color : </label>
               <input style="width: 30%;" type="color" class="form-control form-control-sm form-control-color"
                 id="strokeColor" name="strokeColor" [(ngModel)]="strokeColor" value="#DF2020" title="Choose your color">
             </div>
-          </div>
-          <div class="col p-0">
-            <div class="form-group pt-1">
-              <label class="m-1" for="fillColor">Fill Color : </label>
+            <div class="form-group">
+              <label class="m-3" for="fillColor">Fill Color : </label>
               <input style="width: 30%;" type="color" class="form-control form-control-sm form-control-color"
                 id="fillColor" name="fillColor" [(ngModel)]="fillColor" title="Choose your color">
             </div>
-          </div>
 
           <div class="col p-0">
             <button type="button" [disabled]="!form.valid" class="btn btn-success btn-sm m-1" (click)="addNewArea()">Add
@@ -76,119 +48,74 @@
         </div>
       </form>
     </div>
-  </div>
 
-  <!-- <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <div
-          style="width:70px;height:40px;border:2px solid #87071a; background-color: #43e33b; text-align: center; opacity: 0.5;">
-          A</div>
-      </div>
-      <div class="col">
-        <div
-          style="width:70px;height:40px;border:2px solid #f5dd05; background-color: #5a6ce6; text-align: center; opacity: 0.5;">
-          B</div>
-      </div>
-      <div class="col">
-        <div
-          style="width:70px;height:40px;border:2px solid #ede1e3; background-color: #FF1000; text-align: center; opacity: 0.5;">
-          C</div>
-      </div>
-    </div>
-  </div> -->
-
-  <!-- Edit Current Area -->
-  <div class="container-fluid m-1" style="border-top: solid 0.2px #f8e6e6;">
-    <div class="row">
+    <div class="col">
       <form #formEdit="ngForm">
         <div class="row">
-          <div class="col-3 p-0">
-            <div class="form-group pt-1">
-              <label class="m-2" for="area">Current Area</label>
+            <div class="form-group">
+              <label class="m-2" for="area">Cu.Area</label>
               <select [(ngModel)]="selectedAreaEdit" id="selectedAreaEdit" name="selectedAreaEdit"
-                (ngModelChange)="onChangeSelectedArea(selectedAreaEdit)" class="form-control form-control-sm" required>
+                (ngModelChange)="onChangeSelectedArea(selectedAreaEdit)" class="form-control form-control-sm" style="width: 40%;" required>
                 <option [ngValue]="0" disabled="true">-- Select Current Area --</option>
                 <option [ngValue]="1">-- A --</option>
                 <option [ngValue]="2">-- B --</option>
                 <option [ngValue]="3">-- C --</option>
               </select>
             </div>
-          </div>
-          <div class="col p-0">
-            <div class="form-group pt-1">
+            <div class="form-group">
               <label class="m-2" for="northEdit">North :</label>
-              <input type="text" id="northEdit" name="northEdit" [(ngModel)]="northEdit"
+              <input style="width: 40%;" type="text" id="northEdit" name="northEdit" [(ngModel)]="northEdit"
                 class="form-control form-control-sm" required>
             </div>
-          </div>
-          <div class="col p-0">
-            <div class="form-group pt-1">
+            <div class="form-group">
               <label class="m-2" for="southEdit">South : </label>
-              <input type="text" id="southEdit" name="southEdit" [(ngModel)]="southEdit"
+              <input style="width: 40%;" type="text" id="southEdit" name="southEdit" [(ngModel)]="southEdit"
                 class="form-control form-control-sm" required>
             </div>
-          </div>
-          <div class="col p-0">
-            <div class="form-group pt-1">
+            <div class="form-group">
               <label class="m-2" for="eastEdit">East : </label>
-              <input type="text" id="eastEdit" name="eastEdit" [(ngModel)]="eastEdit"
+              <input style="width: 40%;" type="text" id="eastEdit" name="eastEdit" [(ngModel)]="eastEdit"
                 class="form-control form-control-sm" required>
             </div>
-          </div>
-          <div class="col p-0">
-            <div class="form-group pt-1">
+            <div class="form-group">
               <label class="m-2" for="westEdit">West : </label>
-              <input type="text" id="westEdit" name="westEdit" [(ngModel)]="westEdit"
+              <input style="width: 40%;" type="text" id="westEdit" name="westEdit" [(ngModel)]="westEdit"
                 class="form-control form-control-sm" required>
             </div>
-          </div>
 
-          <div class="col pt-1">
+          <div class="col">
             <button type="button" class="btn btn-warning btn-sm m-1" [disabled]="!formEdit.valid"
               (click)="editCurrentArea(selectedAreaEdit)">Edit Current Area</button>
           </div>
         </div>
       </form>
     </div>
-  </div>
 
-  <!-- Delete Current Area -->
-  <div class="container-fluid m-1" style="border-top: solid 0.2px #f1e0e0;">
-    <div class="row">
-      <div class="col">
-        <div class="row">
-          <div class="col-6 form-group p-0">
-            <div class="form-group pt-1">
-              <label class="m-2" for="area">Current Area</label>
-              <select [(ngModel)]="selectedArea" id="selectedArea" name="selectedArea"
-                class="form-control form-control-sm" required>
-                <option [ngValue]="0">-- Select Current Area --</option>
-                <option [ngValue]="1">-- A --</option>
-                <option [ngValue]="2">-- B --</option>
-                <option [ngValue]="3">-- C --</option>
-              </select>
-            </div>
+    <div class="col">
+      <div class="row">
+          <div class="form-group">
+            <label class="m-2" for="area">Cu.Area</label>
+            <select [(ngModel)]="selectedArea" id="selectedArea" name="selectedArea"
+              class="form-control form-control-sm" style="width: 40%;" required>
+              <option [ngValue]="0">-- Select Current Area --</option>
+              <option [ngValue]="1">-- A --</option>
+              <option [ngValue]="2">-- B --</option>
+              <option [ngValue]="3">-- C --</option>
+            </select>
           </div>
-          <div class="col-6 pt-1">
-            <button type="button" [disabled]="selectedArea == 0" (click)="deleteCurrentArea()"
-              class="btn btn-danger btn-sm m-1">Delete Current Area</button>
-          </div>
+        <div class="col">
+          <button type="button" [disabled]="selectedArea == 0" (click)="deleteCurrentArea()"
+            class="btn btn-danger btn-sm m-1">Delete Current Area</button>
         </div>
       </div>
-      <div class="col"></div>
     </div>
-  </div>
 
+  </div>
   <!-- Map -->
   <div class="map" id="map"></div>
 
   <!-- Footer -->
-  <footer>
-    © 2022 Sharmin Rumpa. All Rights Reserved Designed by &nbsp;
-    <a href="https://sharminrumpa.github.io/portfolio/" target="_blank" rel="noopener"> Sharmin Rumpa</a>
 
-  </footer>
   <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
     <title>Gray Clouds Background</title>
     <path id="Path_39" data-name="Path 39"

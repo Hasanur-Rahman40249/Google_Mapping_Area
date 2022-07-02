@@ -25,13 +25,14 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/google_map_angular13_jsapi'),
+      dir: require('path').join(__dirname, './coverage/angularProject_googleMap'),
       subdir: '.',
       reporters: [
         { type: 'html' },
         { type: 'text-summary' }
       ]
     },
+    
     reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,

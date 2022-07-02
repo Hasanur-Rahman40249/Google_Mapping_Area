@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "google_map_angular13_jsapi": {
+    "angularProject_googleMap": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/google_map_angular13_jsapi",
+            "outputPath": "dist/angularProject_googleMap",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "google_map_angular13_jsapi:build:production"
+              "browserTarget": "angularProject_googleMap:build:production"
             },
             "development": {
-              "browserTarget": "google_map_angular13_jsapi:build:development"
+              "browserTarget": "angularProject_googleMap:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "google_map_angular13_jsapi:build"
+            "browserTarget": "angularProject_googleMap:build"
           }
         },
         "test": {
@@ -105,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "google_map_angular13_jsapi"
+  "defaultProject": "angularProject_googleMap"
 }

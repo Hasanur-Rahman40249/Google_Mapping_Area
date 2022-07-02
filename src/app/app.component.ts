@@ -8,14 +8,14 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'googlemapangular13ajapi';
+  title = 'angularProject_googleMap';
 
-  lat = 33.678;
-  lng = -116.243;
+  lat = 22.358219;
+  lng = 91.831169;
   zoom = 15.5;
 
   loader = new Loader({
-    apiKey: 'Your_Api_Key',
+    apiKey: 'AIzaSyC31_HpZ45BAxkX9aDGLXBysq9TgCQdtwg',
   });
 
   location = { lat: this.lat, lng: this.lng };
@@ -26,10 +26,10 @@ export class AppComponent implements OnInit {
   selectedArea = 0;
   selectedAreaEdit = 0;
 
-  north = 33.675892857255164;
-  south = 33.677185741446536;
-  east = -116.23809321022034;
-  west = -116.23538696289063;
+  north = 22.35788536288357;
+  south = 22.35800815135763;
+  east =  91.83123319758797;
+  west =  91.83140544180298;
   strokeColor = '#ede1e3';
   fillColor = '#FF1000';
 
@@ -50,64 +50,79 @@ export class AppComponent implements OnInit {
       this.map = new google.maps.Map(mapId, mapProperties);
 
       const marker = new google.maps.Marker({
-        position: { lat: 33.68, lng: -116.2499 },
+        position: { lat: 22.358215, lng: 91.831162 },
         map: this.map,
         label: 'A',
       });
 
       const markerB = new google.maps.Marker({
-        position: { lat: 33.68, lng: -116.244 },
+        position: { lat: 22.357917, lng: 91.830969 },
         map: this.map,
         label: 'B',
       });
 
       const markerC = new google.maps.Marker({
-        position: { lat: 33.6765, lng: -116.2485 },
+        position: { lat: 22.357915, lng: 91.831562 },
         map: this.map,
         label: 'C',
       });
 
-      this.rectangle = new google.maps.Rectangle({
+       this.rectangle = new google.maps.Rectangle({
         strokeColor: '#87071a',
         strokeOpacity: 0.8,
         strokeWeight: 2,
         fillColor: '#43e33b',
         fillOpacity: 0.3,
         map: this.map,
+        // editable: true,
+        // draggable:true,
         bounds: new google.maps.LatLngBounds(
-          new google.maps.LatLng(33.6816, -116.24693562698364),
-          new google.maps.LatLng(33.67847321559823, -116.24032186508178)
+          new google.maps.LatLng(22.35816194686944, 91.83098660978699),
+          new google.maps.LatLng(22.35833310619102, 91.83135809573555)
         ),
       });
 
-      this.rectangle1 = new google.maps.Rectangle({
+      // google.maps.event.addListener(rectangle, 'bounds_changed', function () {
+      //   var abc = rectangle.getBounds();
+      //   console.log(abc);
+      // });
+
+    this. rectangle1 = new google.maps.Rectangle({
         strokeColor: '#f5dd05',
         strokeOpacity: 0.8,
         strokeWeight: 2,
         fillColor: '#5a6ce6',
         fillOpacity: 0.3,
         map: this.map,
+        // editable: true,
         bounds: new google.maps.LatLngBounds(
-          new google.maps.LatLng(33.67840000000005, -116.25104291534424),
-          new google.maps.LatLng(33.68133216526413, -116.24871801719665)
+          new google.maps.LatLng(22.357899635968582, 91.83089523925209),
+          new google.maps.LatLng(22.35799265754026, 91.83106153621101)
         ),
       });
 
-      this.rectangle2 = new google.maps.Rectangle({
+      // google.maps.event.addListener(rectangle1, 'bounds_changed', function () {
+      //   var abc = rectangle1.getBounds();
+      //   console.log(abc);
+      // });
+
+   this.rectangle2 = new google.maps.Rectangle({
         strokeColor: '#ede1e3',
         strokeOpacity: 0.8,
         strokeWeight: 2,
         fillColor: '#FF1000',
         fillOpacity: 0.3,
         map: this.map,
+        // editable: true,
+        // draggable:true,
         bounds: new google.maps.LatLngBounds(
-          new google.maps.LatLng(33.67483035840974, -116.25086052513123),
-          new google.maps.LatLng(33.67802499463684, -116.245)
+          new google.maps.LatLng(22.35788536288357, 91.83143319758797),
+          new google.maps.LatLng(22.35800815135763, 91.83170544180298)
         ),
       });
 
-      // google.maps.event.addListener(this.rectangle2, 'bounds_changed', function () {
-      //   var abc = this.rectangle2.getBounds();
+      // google.maps.event.addListener(rectangle2, 'bounds_changed', function () {
+      //   var abc = rectangle2.getBounds();
       //   console.log(abc);
       // });
     });
@@ -145,24 +160,24 @@ export class AppComponent implements OnInit {
 
   onChangeSelectedArea(value: any) {
     if (value == 1) {
-      this.northEdit = 33.6816;
-      this.southEdit = 33.67847321559823;
-      this.eastEdit = -116.24693562698364;
-      this.westEdit = -116.24032186508178;
+      this.northEdit = 22.35816194686944;
+      this.southEdit = 22.35833310619102;
+      this.eastEdit = 91.83098660978699;
+      this.westEdit = 91.83170544180298;
       return;
     }
     if (value == 2) {
-      this.northEdit = 333.67840000000005;
-      this.southEdit = 33.68133216526413;
-      this.eastEdit = -116.25104291534424;
-      this.westEdit = -116.24871801719665;
+      this.northEdit = 22.357899635968582;
+      this.southEdit = 22.35799265754026;
+      this.eastEdit = 91.83089523925209;
+      this.westEdit = 91.83106153621101;
       return;
     }
     if (value == 3) {
-      this.northEdit = 33.67483035840974;
-      this.southEdit = 33.67802499463684;
-      this.eastEdit = -116.25086052513123;
-      this.westEdit = -116.245;
+      this.northEdit = 22.35788536288357;
+      this.southEdit = 22.35800815135763;
+      this.eastEdit = 91.83143319758797;
+      this.westEdit = 91.83170544180298;
       return;
     }
   }

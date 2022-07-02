@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'google_map_angular13_jsapi'`, () => {
+  it(`should have as title 'angularProject_googleMap'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('google_map_angular13_jsapi');
+    expect(app.title).toEqual('angularProject_googleMap');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('google_map_angular13_jsapi app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('angularProject_googleMap app is running!');
   });
 });
